@@ -18,6 +18,10 @@
                         <a class="nav-link py-3 rounded js-scroll-trigger {{ (\Request::route()->getName() == 'valores') ? 'activeNavLink' : '' }}"
                            href="{{route('valores')}}">Valores</a>
                     </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 rounded js-scroll-trigger {{ (\Request::route()->getName() == 'pools') ? 'activeNavLink' : '' }}"
+                           href="{{route('pools')}}">Pools</a>
+                    </li>
                     <li class="nav-item mx-lg-1">
                         <a class="nav-link py-3  rounded js-scroll-trigger {{ (\Request::route()->getName() == 'faq') ? 'activeNavLink' : '' }}"
                            href="{{route('faq')}}">Preguntas

@@ -9,7 +9,13 @@ class PoolController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('onlyAdmin');
+        $this->middleware('onlyAdmin', ['except' => ['getPools']]);
+    }
+
+    public function getPools()
+    {
+        $pools = Pool::orderBy('name')->get();
+        return view('pools', compact('pools'));
     }
 
     public function store(Request $request)

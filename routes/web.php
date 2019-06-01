@@ -29,6 +29,7 @@ Route::resource('content', 'ContentController');
 Route::resource('category', 'CategoryController');
 Route::resource('pool', 'PoolController');
 Route::get('users', 'AdminController@getUsers')->name('user.index');
+Route::get('pools', 'PoolController@getPools')->name('pools')->middleware('auth');
 
 Route::get('/logout', function () {
     Auth::logout();
