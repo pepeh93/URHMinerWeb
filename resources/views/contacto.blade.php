@@ -46,7 +46,7 @@
                 {{csrf_field()}}
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresá tu nombre">
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresá tu nombre" maxlength="40">
                 </div>
 
                 <div class="form-group">
@@ -108,6 +108,7 @@
                 messages: {
                     "nombre": {
                         required: "Por favor, ingresá tu nombre",
+                        maxlength: "El nombre no puede exceder los 45 caracteres"
                     },
                     "email": {
                         required: "Por favor, ingresá tu e-mail",
