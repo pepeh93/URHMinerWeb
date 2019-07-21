@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Contacto;
 use App\Content;
 use App\Pool;
 use App\User;
@@ -33,5 +34,16 @@ class AdminController extends Controller
     public function getUsers(){
         $users = User::latest()->paginate(10);
         return view('administrador.user.index', compact('users'));
+    }
+
+    public function getContactos(){
+        $contactos = Contacto::latest()->paginate(10);
+        return view('administrador.contactos.index', compact('contactos'));
+    }
+
+    public function eliminarContacto($id){
+        $contacto = Contacto::findOrFail($id);
+        $contacto->delete();
+        return redirect()->route('verFormulariosContacto')->with('message', 'El contacto fue eliminado correctamente.');
     }
 }

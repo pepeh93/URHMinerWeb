@@ -18,11 +18,11 @@
             </div>
             <div class="footer-col col-md-4">
                 <p><i class="fab fa-github mr-2 fa-2x"></i>
-                    <a href="">Website Repo</a>
+                    <a href="https://github.com/pepeh93/URHMinerWeb">Website Repo</a>
                 </p>
 
                 <p><i class="fab fa-github mr-2 fa-2x"></i>
-                    <a href="">Android App Repo</a>
+                    <a href="https://github.com/pepeh93/urhminerAndroid">Android App Repo</a>
                 </p>
             </div>
         </div>

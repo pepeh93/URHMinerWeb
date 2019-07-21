@@ -19,7 +19,7 @@
         <div class="container card">
             <div class="card-body">
         <p class="faq-title">¿Qué es URH Miner?</p>
-        <p >Es una aplicación la cual permite la minería para usuarios no familiarizados con la misma a través de
+        <p>Es una aplicación la cual permite la minería para usuarios no familiarizados con la misma a través de
             aplicaciones de terceros funcionando como launcher.
             También cuenta con una aplicación mobile para la monitorización de la misma.</p>
         

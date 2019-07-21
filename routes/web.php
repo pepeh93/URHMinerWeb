@@ -23,11 +23,13 @@ Route::view('/faq', 'faq')->name('faq')->middleware('auth');
 Route::view('/descargas', 'descargas')->name('descargas')->middleware('auth');
 
 Route::get('/administrar', 'AdminController@getDashboard')->name('administrar');
-Route::post('/contacto', 'ContactoController');
+Route::post('/contacto', 'ContactoController@procesarFormulario')->name('guardarContacto');
 
 Route::resource('content', 'ContentController');
 Route::resource('category', 'CategoryController');
 Route::resource('pool', 'PoolController');
+Route::get('formularios-de-contacto', 'AdminController@getContactos')->name('verFormulariosContacto');
+Route::delete('eliminar-contacto/{id}', 'AdminController@eliminarContacto')->name('contacto.delete');
 Route::get('users', 'AdminController@getUsers')->name('user.index');
 Route::get('pools', 'PoolController@getPools')->name('pools')->middleware('auth');
 
