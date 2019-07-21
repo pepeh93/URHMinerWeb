@@ -2,12 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
 use App\Contacto;
-use App\Content;
-use App\Pool;
 use App\User;
-use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
