@@ -45,8 +45,13 @@
                     </li>
                 @else
                     <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger {{ (\Request::route()->getName() == 'login') ? 'activeNavLink' : '' }}"
-                           href="{{route('login')}}">Ingresar</a>
+                        @if (\Request::route()->getName() == 'login')
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger activeNavLink" style="cursor:pointer"
+                           onclick="$('#about').fadeOut()">Ingresar</a>
+                            @else
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                               href="{{route('login')}}">Ingresar</a>
+                        @endif
                     </li>
                     <li class="nav-item mx-0 mx-lg-1">
                         <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger {{ (\Request::route()->getName() == 'contacto') ? 'activeNavLink' : '' }}"
